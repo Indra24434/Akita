@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login Admin - AKITA</title>
+</head>
+<body>
+  <h2>Login Admin</h2>
+  <form onsubmit="return login()">
+    <input type="password" id="password" placeholder="Password" required />
+    <button type="submit">Login</button>
+  </form>
+
+  <script>
+    function login() {
+      const pass = document.getElementById("password").value;
+      const expire = Date.now() + 7 * 24 * 60 * 60 * 1000; // 7 hari
+      if (pass === "admin123") {
+        localStorage.setItem("loggedIn", "true");
+        localStorage.setItem("expireTime", expire.toString());
+        window.location.href = "kelola.html";
+      } else {
+        alert("Password salah.");
+      }
+      return false;
+    }
+  </script>
+</body>
+</html>

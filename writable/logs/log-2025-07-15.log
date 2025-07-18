@@ -1,0 +1,509 @@
+CRITICAL - 2025-07-15 05:59:09 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "jadwal.jtm;"
+[Method: GET, Route: jadwal.jtm;]
+in SYSTEMPATH\Router\Router.php on line 741.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('jadwal.jtm;')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('jadwal.jtm;')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+CRITICAL - 2025-07-15 10:09:45 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: OPTIONS, Route: api/login]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 10:09:45 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/login]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 10:10:16 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: /]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 10:10:22 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: /]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 10:48:32 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: /]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 10:52:29 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: /]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 10:52:45 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/login]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 10:52:45 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: manifest.json]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 10:52:45 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: icon.png]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 10:52:45 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: icon.png]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 10:52:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: icon.png]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 10:52:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: icon.png]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 10:53:10 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: POST, Route: api/register]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 10:53:45 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 10:54:45 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 10:55:33 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: POST, Route: api/login]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 10:55:45 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 10:56:45 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 10:57:45 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 10:58:45 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 10:59:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 11:00:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 11:01:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 11:02:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 11:03:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 11:04:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 11:05:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 11:06:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 11:07:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 11:08:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 11:09:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 11:10:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:04:04 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:04:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:05:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:06:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:07:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:08:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:09:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:10:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:11:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:12:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:13:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:14:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:15:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:16:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:17:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:18:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:19:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:20:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:21:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:22:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:23:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:24:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:25:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:26:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:27:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:28:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:43:27 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:43:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:44:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:45:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:46:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:47:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:48:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:49:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:50:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:51:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:52:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:53:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:54:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-15 12:55:50 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2025-07-15 14:17:50 --> mysqli_sql_exception: Table 'akita.agenda' doesn't exist in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(731): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-07-15 14:17:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'akita.agenda' doesn't exist
+[Method: GET, Route: api/agenda]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `agenda`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Agenda.php(14): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+CRITICAL - 2025-07-15 14:17:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'akita.agenda' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(731): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `agenda`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `agenda`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `agenda`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Agenda.php(14): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+CRITICAL - 2025-07-15 14:17:50 --> [Caused by] mysqli_sql_exception: Table 'akita.agenda' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `agenda`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(731): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `agenda`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `agenda`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `agenda`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Agenda.php(14): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+ERROR - 2025-07-15 14:18:50 --> mysqli_sql_exception: Table 'akita.agenda' doesn't exist in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(731): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-07-15 14:18:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'akita.agenda' doesn't exist
+[Method: GET, Route: api/agenda]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `agenda`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Agenda.php(14): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+CRITICAL - 2025-07-15 14:18:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'akita.agenda' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(731): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `agenda`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `agenda`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `agenda`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Agenda.php(14): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+CRITICAL - 2025-07-15 14:18:50 --> [Caused by] mysqli_sql_exception: Table 'akita.agenda' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `agenda`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(731): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `agenda`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `agenda`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `agenda`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Agenda.php(14): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+ERROR - 2025-07-15 14:19:50 --> mysqli_sql_exception: Table 'akita.agenda' doesn't exist in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(731): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-07-15 14:19:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'akita.agenda' doesn't exist
+[Method: GET, Route: api/agenda]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `agenda`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Agenda.php(14): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+CRITICAL - 2025-07-15 14:19:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'akita.agenda' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(731): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `agenda`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `agenda`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `agenda`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Agenda.php(14): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+CRITICAL - 2025-07-15 14:19:50 --> [Caused by] mysqli_sql_exception: Table 'akita.agenda' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `agenda`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(731): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `agenda`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `agenda`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `agenda`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Agenda.php(14): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Input Agenda - AKITA</title>
+  </head>
+  <body>
+    <h2>Form Input Agenda</h2>
+    <form id="agenda-form">
+      <label>Tanggal</label>
+      <input type="date" id="Tanggal" required />
+
+      <label>Jam Mulai</label>
+      <input type="time" id="JamMulai" required />
+
+      <label>Jam Selesai</label>
+      <input type="time" id="JamSelesai" required />
+
+      <label>Agenda</label>
+      <input type="text" id="Agenda" required />
+
+      <label>PIC</label>
+      <input type="text" id="PIC" />
+
+      <label>Tempat</label>
+      <input type="text" id="Tempat" />
+
+      <button type="submit">Kirim</button>
+    </form>
+
+    <button onclick="logout()">Logout</button>
+
+    <script>
+      // Proteksi Login
+      const expire = localStorage.getItem("expireTime");
+      if (
+        localStorage.getItem("loggedIn") !== "true" ||
+        Date.now() > parseInt(expire)
+      ) {
+        localStorage.clear();
+        alert("Sesi login habis.");
+        window.location.href = "login.html";
+      }
+
+      // Submit Agenda
+      document
+        .getElementById("agenda-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const tanggal = document.getElementById("Tanggal").value;
+          const jamMulai = document.getElementById("JamMulai").value;
+          const jamSelesai = document.getElementById("JamSelesai").value;
+          const jamGabungan = `${jamMulai} - ${jamSelesai}`;
+
+          const formData = new FormData();
+          formData.append("tanggal", tanggal);
+          formData.append("jam", jamGabungan);
+          formData.append("kegiatan", document.getElementById("Agenda").value);
+          formData.append("pic", document.getElementById("PIC").value);
+          formData.append("tempat", document.getElementById("Tempat").value);
+
+          fetch("http://localhost:8080/agenda", {
+            method: "POST",
+            body: formData,
+          })
+          .then(async (res) => {
+  const result = await res.json();
+  if (!res.ok) {
+    throw new Error(result.messages ? JSON.stringify(result.messages) : result.message);
+  }
+  alert("Agenda berhasil dikirim.");
+})
+.catch((err) => alert("Gagal mengirim: " + err.message));
+
+        });
+
+      function logout() {
+        localStorage.clear();
+        window.location.href = "index.html";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin AKITA</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      display: flex;
+    }
+    .sidebar {
+      width: 200px;
+      background-color: #2c3e50;
+      color: white;
+      height: 100vh;
+      padding-top: 20px;
+      position: fixed;
+    }
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .sidebar button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background: none;
+      border: none;
+      color: white;
+      text-align: left;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .sidebar button:hover {
+      background-color: #34495e;
+    }
+    .content {
+      margin-left: 200px;
+      padding: 20px;
+      width: 100%;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    input, button {
+      padding: 6px;
+      margin: 4px 0;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Admin AKITA</h2>
+    <button onclick="showKelola()">Kelola Agenda</button>
+    <button onclick="showTambah()">Tambah Agenda</button>
+  </div>
+
+  <div class="content">
+    <div id="kelola-section" class="hidden">
+      <h2>Kelola Agenda</h2>
+      <table id="agenda-table">
+        <thead>
+          <tr>
+            <th>Tanggal</th>
+            <th>Jam</th>
+            <th>Agenda</th>
+            <th>PIC</th>
+            <th>Tempat</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <h3>Edit Agenda</h3>
+      <form id="edit-form" class="hidden">
+        <input type="hidden" id="edit-id" />
+        <label>Tanggal: <input type="date" id="edit-tanggal" required /></label><br />
+        <label>Jam: <input type="text" id="edit-jam" required /></label><br />
+        <label>Agenda: <input type="text" id="edit-kegiatan" required /></label><br />
+        <label>PIC: <input type="text" id="edit-pic" /></label><br />
+        <label>Tempat: <input type="text" id="edit-tempat" /></label><br />
+        <button type="submit">Simpan Perubahan</button>
+        <button type="button" onclick="batalEdit()">Batal</button>
+      </form>
+    </div>
+
+    <div id="tambah-section" class="hidden">
+      <h2>Tambah Agenda</h2>
+      <form id="tambah-form">
+        <label>Tanggal: <input type="date" id="Tanggal" required /></label><br />
+        <label>Jam Mulai: <input type="time" id="JamMulai" required /></label><br />
+        <label>Jam Selesai: <input type="time" id="JamSelesai" required /></label><br />
+        <label>Agenda: <input type="text" id="Agenda" required /></label><br />
+        <label>PIC: <input type="text" id="PIC" /></label><br />
+        <label>Tempat: <input type="text" id="Tempat" /></label><br />
+        <button type="submit">Kirim</button>
+      </form>
+    </div>
+
+    <div id="welcome-section">
+      <h2>Selamat Datang, Admin AKITA</h2>
+      <p>Pilih menu di sidebar untuk mulai mengelola agenda.</p>
+    </div>
+  </div>
+
+  <script>
+    const API = "http://localhost:8080/agenda";
+    const tbody = document.querySelector("#agenda-table tbody");
+
+    function showKelola() {
+      document.getElementById("kelola-section").classList.remove("hidden");
+      document.getElementById("tambah-section").classList.add("hidden");
+      document.getElementById("welcome-section").classList.add("hidden");
+      loadAgenda();
+    }
+
+    function showTambah() {
+      document.getElementById("kelola-section").classList.add("hidden");
+      document.getElementById("tambah-section").classList.remove("hidden");
+      document.getElementById("welcome-section").classList.add("hidden");
+    }
+
+    function loadAgenda() {
+      fetch(API)
+        .then(res => res.json())
+        .then(data => {
+          tbody.innerHTML = "";
+          data.forEach(item => {
+            const tr = document.createElement("tr");
+            tr.innerHTML = `
+              <td>${item.tanggal}</td>
+              <td>${item.jam}</td>
+              <td>${item.kegiatan}</td>
+              <td>${item.pic ?? ''}</td>
+              <td>${item.tempat ?? ''}</td>
+              <td>
+                <button onclick='editData(${JSON.stringify(item)})'>Edit</button>
+                <button onclick='hapusData(${item.id})'>Hapus</button>
+              </td>
+            `;
+            tbody.appendChild(tr);
+          });
+        });
+    }
+
+    function editData(data) {
+      document.getElementById("edit-form").classList.remove("hidden");
+      document.getElementById("edit-id").value = data.id;
+      document.getElementById("edit-tanggal").value = toYYYYMMDD(data.tanggal);
+      document.getElementById("edit-jam").value = data.jam;
+      document.getElementById("edit-kegiatan").value = data.kegiatan;
+      document.getElementById("edit-pic").value = data.pic;
+      document.getElementById("edit-tempat").value = data.tempat;
+    }
+
+    function batalEdit() {
+      document.getElementById("edit-form").reset();
+      document.getElementById("edit-form").classList.add("hidden");
+    }
+
+    document.getElementById("edit-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const id = document.getElementById("edit-id").value;
+      const payload = {
+        tanggal: document.getElementById("edit-tanggal").value,
+        jam: document.getElementById("edit-jam").value,
+        kegiatan: document.getElementById("edit-kegiatan").value,
+        pic: document.getElementById("edit-pic").value,
+        tempat: document.getElementById("edit-tempat").value
+      };
+
+      fetch(`${API}/${id}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      })
+        .then(res => res.json())
+        .then(() => {
+          alert("Agenda berhasil diupdate.");
+          batalEdit();
+          loadAgenda();
+        });
+    });
+
+    function hapusData(id) {
+      if (confirm("Yakin ingin menghapus agenda ini?")) {
+        fetch(`${API}/${id}`, { method: "DELETE" })
+          .then(res => res.json())
+          .then(() => {
+            alert("Agenda berhasil dihapus.");
+            loadAgenda();
+          });
+      }
+    }
+
+    document.getElementById("tambah-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const jamGabungan = `${this.JamMulai.value} - ${this.JamSelesai.value}`;
+      const formData = new FormData();
+      formData.append("tanggal", this.Tanggal.value);
+      formData.append("jam", jamGabungan);
+      formData.append("kegiatan", this.Agenda.value);
+      formData.append("pic", this.PIC.value);
+      formData.append("tempat", this.Tempat.value);
+
+      fetch(API, {
+        method: "POST",
+        body: formData
+      })
+        .then(() => {
+          alert("Agenda berhasil ditambahkan.");
+          this.reset();
+        })
+        .catch(err => alert("Gagal menyimpan: " + err.message));
+    });
+
+    function toYYYYMMDD(tanggalIndo) {
+      const [dd, bulanStr, yyyy] = tanggalIndo.split("-");
+      const bulanMap = {
+        Januari: "01", Februari: "02", Maret: "03", April: "04", Mei: "05", Juni: "06",
+        Juli: "07", Agustus: "08", September: "09", Oktober: "10", November: "11", Desember: "12"
+      };
+      return `${yyyy}-${bulanMap[bulanStr]}-${dd.padStart(2, "0")}`;
+    }
+  </script>
+</body>
+</html>

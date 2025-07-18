@@ -1,0 +1,1422 @@
+ERROR - 2025-07-16 06:04:41 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'akita', 3306, '', 0)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(14): CodeIgniter\BaseModel->findAll()
+#6 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-16 06:04:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: api/agenda]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `agenda`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Agenda.php(14): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+ERROR - 2025-07-16 06:05:41 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'akita', 3306, '', 0)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(14): CodeIgniter\BaseModel->findAll()
+#6 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-16 06:05:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: api/agenda]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `agenda`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Agenda.php(14): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+ERROR - 2025-07-16 06:28:51 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'akita', 3306, '', 0)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#6 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-16 06:28:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: agenda]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `agenda`
+ORDER BY `tanggal` ASC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+ERROR - 2025-07-16 06:28:53 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'akita', 3306, '', 0)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#6 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-16 06:28:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: agenda]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `agenda`
+ORDER BY `tanggal` ASC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+ERROR - 2025-07-16 06:28:54 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'akita', 3306, '', 0)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#6 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-16 06:28:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: agenda]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `agenda`
+ORDER BY `tanggal` ASC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+ERROR - 2025-07-16 06:29:51 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'akita', 3306, '', 0)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#6 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-16 06:29:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: agenda]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `agenda`
+ORDER BY `tanggal` ASC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+ERROR - 2025-07-16 06:30:05 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'akita', 3306, '', 0)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#6 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-16 06:30:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: agenda]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `agenda`
+ORDER BY `tanggal` ASC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+ERROR - 2025-07-16 06:30:06 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'akita', 3306, '', 0)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#6 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-16 06:30:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: agenda]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `agenda`
+ORDER BY `tanggal` ASC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+ERROR - 2025-07-16 06:30:08 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'akita', 3306, '', 0)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#6 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-16 06:30:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: agenda]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `agenda`
+ORDER BY `tanggal` ASC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+ERROR - 2025-07-16 06:30:09 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'akita', 3306, '', 0)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#6 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-16 06:30:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: agenda]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `agenda`
+ORDER BY `tanggal` ASC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+ERROR - 2025-07-16 06:30:10 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'akita', 3306, '', 0)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#6 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-16 06:30:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: agenda]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `agenda`
+ORDER BY `tanggal` ASC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+ERROR - 2025-07-16 06:30:16 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'akita', 3306, '', 0)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#6 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-16 06:30:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: agenda]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `agenda`
+ORDER BY `tanggal` ASC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+ERROR - 2025-07-16 06:31:16 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'akita', 3306, '', 0)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#6 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-16 06:31:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: agenda]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `agenda`
+ORDER BY `tanggal` ASC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+ERROR - 2025-07-16 06:31:58 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'akita', 3306, '', 0)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#6 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-16 06:31:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: agenda]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `agenda`
+ORDER BY `tanggal` ASC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+ERROR - 2025-07-16 06:31:59 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'akita', 3306, '', 0)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#6 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-16 06:31:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: agenda]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `agenda`
+ORDER BY `tanggal` ASC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+ERROR - 2025-07-16 06:32:10 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'akita', 3306, '', 0)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#6 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-16 06:32:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: agenda]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `agenda`
+ORDER BY `tanggal` ASC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+ERROR - 2025-07-16 06:32:16 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'akita', 3306, '', 0)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#6 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-16 06:32:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: agenda]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `agenda`
+ORDER BY `tanggal` ASC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+ERROR - 2025-07-16 06:33:14 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'akita', 3306, '', 0)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#6 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-16 06:33:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: agenda]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `agenda`
+ORDER BY `tanggal` ASC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+ERROR - 2025-07-16 06:33:16 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'akita', 3306, '', 0)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#6 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-16 06:33:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: agenda]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `agenda`
+ORDER BY `tanggal` ASC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+ERROR - 2025-07-16 06:33:26 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'akita', 3306, '', 0)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+#6 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->index()
+#7 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-16 06:33:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: agenda]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `agenda`
+ORDER BY `tanggal` ASC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Agenda.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+CRITICAL - 2025-07-16 06:36:59 --> ParseError: syntax error, unexpected token "public", expecting end of file
+[Method: GET, Route: agenda]
+in APPPATH\Controllers\Agenda.php on line 2.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\xampp\\htdocs\\Akita Kppn Pkl\\app\\Controllers\\Agenda.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Agenda')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Agenda')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Agenda', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+ERROR - 2025-07-16 10:20:30 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ag...', 0)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(731): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ag...')
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ag...')
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ag...', Array, false)
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(842): CodeIgniter\Model->doInsert(Array)
+#6 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(799): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(37): CodeIgniter\Model->insert(Array)
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->create()
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-16 10:20:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: agenda]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `agenda` (`tanggal`, `jam`, `kegiatan`, `pic`, `tempat`, `created_at`, `updated_at`) VALUES (:tanggal:, :jam:, :kegiatan:, :pic:, :tempat:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(842): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(799): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Agenda.php(37): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->create()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+CRITICAL - 2025-07-16 10:20:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(731): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `agenda` (`tanggal`, `jam`, `kegiatan`, `pic`, `tempat`, `created_at`, `updated_at`) VALUES (\'2025-07-16\', \'16:00 - 18:00\', \'Makan\', \'Indra\', \'Rumah\', \'2025-07-16 10:20:30\', \'2025-07-16 10:20:30\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `agenda` (`tanggal`, `jam`, `kegiatan`, `pic`, `tempat`, `created_at`, `updated_at`) VALUES (\'2025-07-16\', \'16:00 - 18:00\', \'Makan\', \'Indra\', \'Rumah\', \'2025-07-16 10:20:30\', \'2025-07-16 10:20:30\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `agenda` (`tanggal`, `jam`, `kegiatan`, `pic`, `tempat`, `created_at`, `updated_at`) VALUES (:tanggal:, :jam:, :kegiatan:, :pic:, :tempat:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(842): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(799): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Agenda.php(37): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->create()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+CRITICAL - 2025-07-16 10:20:30 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `agenda` (`tanggal`, `jam`, `kegiatan`, `pic`, `tempat`, `created_at`, `updated_at`) VALUES (\'2025-07-16\', \'16:00 - 18:00\', \'Makan\', \'Indra\', \'Rumah\', \'2025-07-16 10:20:30\', \'2025-07-16 10:20:30\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(731): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `agenda` (`tanggal`, `jam`, `kegiatan`, `pic`, `tempat`, `created_at`, `updated_at`) VALUES (\'2025-07-16\', \'16:00 - 18:00\', \'Makan\', \'Indra\', \'Rumah\', \'2025-07-16 10:20:30\', \'2025-07-16 10:20:30\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `agenda` (`tanggal`, `jam`, `kegiatan`, `pic`, `tempat`, `created_at`, `updated_at`) VALUES (\'2025-07-16\', \'16:00 - 18:00\', \'Makan\', \'Indra\', \'Rumah\', \'2025-07-16 10:20:30\', \'2025-07-16 10:20:30\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `agenda` (`tanggal`, `jam`, `kegiatan`, `pic`, `tempat`, `created_at`, `updated_at`) VALUES (:tanggal:, :jam:, :kegiatan:, :pic:, :tempat:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(842): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(799): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Agenda.php(37): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->create()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+ERROR - 2025-07-16 10:22:04 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ag...', 0)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(731): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ag...')
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ag...')
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ag...', Array, false)
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(842): CodeIgniter\Model->doInsert(Array)
+#6 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(799): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(37): CodeIgniter\Model->insert(Array)
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->create()
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-16 10:22:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: agenda]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `agenda` (`tanggal`, `jam`, `kegiatan`, `pic`, `tempat`, `created_at`, `updated_at`) VALUES (:tanggal:, :jam:, :kegiatan:, :pic:, :tempat:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(842): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(799): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Agenda.php(37): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->create()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+CRITICAL - 2025-07-16 10:22:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(731): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `agenda` (`tanggal`, `jam`, `kegiatan`, `pic`, `tempat`, `created_at`, `updated_at`) VALUES (\'2025-07-16\', \'11:11 - 22:22\', \'k\', \'k\', \'k\', \'2025-07-16 10:22:04\', \'2025-07-16 10:22:04\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `agenda` (`tanggal`, `jam`, `kegiatan`, `pic`, `tempat`, `created_at`, `updated_at`) VALUES (\'2025-07-16\', \'11:11 - 22:22\', \'k\', \'k\', \'k\', \'2025-07-16 10:22:04\', \'2025-07-16 10:22:04\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `agenda` (`tanggal`, `jam`, `kegiatan`, `pic`, `tempat`, `created_at`, `updated_at`) VALUES (:tanggal:, :jam:, :kegiatan:, :pic:, :tempat:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(842): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(799): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Agenda.php(37): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->create()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+CRITICAL - 2025-07-16 10:22:04 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `agenda` (`tanggal`, `jam`, `kegiatan`, `pic`, `tempat`, `created_at`, `updated_at`) VALUES (\'2025-07-16\', \'11:11 - 22:22\', \'k\', \'k\', \'k\', \'2025-07-16 10:22:04\', \'2025-07-16 10:22:04\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(731): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `agenda` (`tanggal`, `jam`, `kegiatan`, `pic`, `tempat`, `created_at`, `updated_at`) VALUES (\'2025-07-16\', \'11:11 - 22:22\', \'k\', \'k\', \'k\', \'2025-07-16 10:22:04\', \'2025-07-16 10:22:04\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `agenda` (`tanggal`, `jam`, `kegiatan`, `pic`, `tempat`, `created_at`, `updated_at`) VALUES (\'2025-07-16\', \'11:11 - 22:22\', \'k\', \'k\', \'k\', \'2025-07-16 10:22:04\', \'2025-07-16 10:22:04\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `agenda` (`tanggal`, `jam`, `kegiatan`, `pic`, `tempat`, `created_at`, `updated_at`) VALUES (:tanggal:, :jam:, :kegiatan:, :pic:, :tempat:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(842): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(799): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Agenda.php(37): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->create()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+ERROR - 2025-07-16 10:29:35 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ag...', 0)
+#1 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(731): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ag...')
+#2 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ag...')
+#3 D:\xampp\htdocs\Akita Kppn Pkl\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ag...', Array, false)
+#4 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\xampp\htdocs\Akita Kppn Pkl\system\BaseModel.php(842): CodeIgniter\Model->doInsert(Array)
+#6 D:\xampp\htdocs\Akita Kppn Pkl\system\Model.php(799): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\xampp\htdocs\Akita Kppn Pkl\app\Controllers\Agenda.php(38): CodeIgniter\Model->insert(Array)
+#8 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(933): App\Controllers\Agenda->create()
+#9 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+#10 D:\xampp\htdocs\Akita Kppn Pkl\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 D:\xampp\htdocs\Akita Kppn Pkl\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\xampp\htdocs\Akita Kppn Pkl\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 D:\xampp\htdocs\Akita Kppn Pkl\system\rewrite.php(44): require_once('D:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-16 10:29:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: agenda]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `agenda` (`tanggal`, `jam`, `kegiatan`, `pic`, `tempat`, `created_at`, `updated_at`) VALUES (:tanggal:, :jam:, :kegiatan:, :pic:, :tempat:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(842): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(799): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Agenda.php(38): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->create()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+CRITICAL - 2025-07-16 10:29:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(731): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `agenda` (`tanggal`, `jam`, `kegiatan`, `pic`, `tempat`, `created_at`, `updated_at`) VALUES (\'2025-07-16\', \'12:12 - 13:13\', \'d\', \'m\', \'m\', \'2025-07-16 10:29:34\', \'2025-07-16 10:29:34\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `agenda` (`tanggal`, `jam`, `kegiatan`, `pic`, `tempat`, `created_at`, `updated_at`) VALUES (\'2025-07-16\', \'12:12 - 13:13\', \'d\', \'m\', \'m\', \'2025-07-16 10:29:34\', \'2025-07-16 10:29:34\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `agenda` (`tanggal`, `jam`, `kegiatan`, `pic`, `tempat`, `created_at`, `updated_at`) VALUES (:tanggal:, :jam:, :kegiatan:, :pic:, :tempat:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(842): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(799): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Agenda.php(38): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->create()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+CRITICAL - 2025-07-16 10:29:35 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `agenda` (`tanggal`, `jam`, `kegiatan`, `pic`, `tempat`, `created_at`, `updated_at`) VALUES (\'2025-07-16\', \'12:12 - 13:13\', \'d\', \'m\', \'m\', \'2025-07-16 10:29:34\', \'2025-07-16 10:29:34\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(731): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `agenda` (`tanggal`, `jam`, `kegiatan`, `pic`, `tempat`, `created_at`, `updated_at`) VALUES (\'2025-07-16\', \'12:12 - 13:13\', \'d\', \'m\', \'m\', \'2025-07-16 10:29:34\', \'2025-07-16 10:29:34\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `agenda` (`tanggal`, `jam`, `kegiatan`, `pic`, `tempat`, `created_at`, `updated_at`) VALUES (\'2025-07-16\', \'12:12 - 13:13\', \'d\', \'m\', \'m\', \'2025-07-16 10:29:34\', \'2025-07-16 10:29:34\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `agenda` (`tanggal`, `jam`, `kegiatan`, `pic`, `tempat`, `created_at`, `updated_at`) VALUES (:tanggal:, :jam:, :kegiatan:, :pic:, :tempat:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(842): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(799): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Agenda.php(38): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->create()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+CRITICAL - 2025-07-16 10:44:12 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: PUT, Route: agenda/1]
+in SYSTEMPATH\BaseModel.php on line 1013.
+ 1 SYSTEMPATH\BaseModel.php(1013): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(862): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Agenda.php(48): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->update('1')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+CRITICAL - 2025-07-16 10:44:25 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: PUT, Route: agenda/1]
+in SYSTEMPATH\BaseModel.php on line 1013.
+ 1 SYSTEMPATH\BaseModel.php(1013): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(862): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Agenda.php(48): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Agenda->update('1')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+CRITICAL - 2025-07-16 12:57:37 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 73.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-16 12:57:37 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: agenda]
+in APPPATH\Config\Filters.php on line 73.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-16 12:58:37 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 107.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-16 12:58:37 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: agenda]
+in APPPATH\Config\Filters.php on line 107.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-16 12:59:37 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 107.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-16 12:59:37 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: agenda]
+in APPPATH\Config\Filters.php on line 107.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-16 13:00:37 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 107.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-16 13:00:37 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: agenda]
+in APPPATH\Config\Filters.php on line 107.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-16 13:01:37 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 107.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-16 13:01:37 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: agenda]
+in APPPATH\Config\Filters.php on line 107.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-16 13:02:37 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 107.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-16 13:02:37 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: agenda]
+in APPPATH\Config\Filters.php on line 107.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-16 13:03:37 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 107.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-16 13:03:37 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: agenda]
+in APPPATH\Config\Filters.php on line 107.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-16 13:04:02 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: /]
+in APPPATH\Config\Filters.php on line 107.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-16 13:04:02 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: /]
+in APPPATH\Config\Filters.php on line 107.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-16 13:04:37 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: api/agenda]
+in APPPATH\Config\Filters.php on line 107.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-16 13:04:37 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: agenda]
+in APPPATH\Config\Filters.php on line 107.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2025-07-16 13:12:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 13:12:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 13:12:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 14:39:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 14:39:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 14:42:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 14:43:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 14:45:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 14:45:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 14:45:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 14:45:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 14:48:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 14:48:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 14:50:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 14:50:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 14:50:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 14:53:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 14:53:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 14:53:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 14:53:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-16 14:53:34 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/kelola.php"
+[Method: GET, Route: admin/kelola]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/kelola.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/kelola', [], true)
+ 3 APPPATH\Config\Routes.php(28): view('admin/kelola')
+ 4 SYSTEMPATH\CodeIgniter.php(875): CodeIgniter\Router\RouteCollection->{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\Akita Kppn Pkl\\public\\index.php')
+DEBUG - 2025-07-16 14:55:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 14:55:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 14:55:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 14:55:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 14:56:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 14:56:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 14:56:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 15:11:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 15:11:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 15:11:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 15:13:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 15:14:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 15:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 15:18:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 15:26:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 15:26:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 15:28:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 15:28:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 15:28:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 23:13:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 23:13:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 23:13:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 23:13:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 23:16:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 23:16:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 23:16:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 23:16:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 23:16:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 23:16:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 23:19:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 23:19:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 23:20:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 23:20:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 23:31:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 23:35:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 23:36:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 23:40:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 23:41:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 23:43:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 23:44:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 23:54:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-16 23:54:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
