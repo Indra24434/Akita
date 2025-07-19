@@ -210,11 +210,44 @@ class App extends BaseConfig
         // Set baseURL from environment variable or auto-detect
         $this->baseURL = $this->getBaseURL();
 
+        // Get environment safely
+        $environment = $this->getEnvironment();
+
         // Enable HTTPS enforcement in production
-        if (ENVIRONMENT === 'production') {
+        if ($environment === 'production') {
             $this->forceGlobalSecureRequests = (bool) env('app.forceGlobalSecureRequests', true);
             $this->CSPEnabled = (bool) env('app.CSPEnabled', true);
         }
+    }
+
+    /**
+     * Get the current environment safely
+     */
+    private function getEnvironment(): string
+    {
+        // Try to get from defined constant first
+        if (defined('ENVIRONMENT')) {
+            return ENVIRONMENT;
+        }
+
+        // Try to get from environment variable
+        $env = env('CI_ENVIRONMENT');
+        if ($env) {
+            return $env;
+        }
+
+        // Try to get from $_ENV
+        if (isset($_ENV['CI_ENVIRONMENT'])) {
+            return $_ENV['CI_ENVIRONMENT'];
+        }
+
+        // Try to get from $_SERVER
+        if (isset($_SERVER['CI_ENVIRONMENT'])) {
+            return $_SERVER['CI_ENVIRONMENT'];
+        }
+
+        // Default to production for safety
+        return 'production';
     }
 
     /**
