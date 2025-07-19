@@ -2,7 +2,7 @@
 builder = "nixpacks"
 
 [deploy]
-startCommand = "php -S 0.0.0.0:$PORT -t public"
+startCommand = "php -d memory_limit=512M -S 0.0.0.0:$PORT -t public"
 healthcheckPath = "/"
 healthcheckTimeout = 300
 restartPolicyType = "on_failure"
@@ -10,8 +10,7 @@ restartPolicyType = "on_failure"
 [build.nixpacksConfig]
 phases.setup = "php81, nginx, libmysqlclient, php81Packages.composer"
 phases.install = "composer install --no-dev --optimize-autoloader"
-phases.build = "php spark key:generate --force && php spark cache:clear"
 
 [variables]
 CI_ENVIRONMENT = "production"
-APP_TIMEZONE = "Asia/Jakarta"
+PHP_MEMORY_LIMIT = "512M"
