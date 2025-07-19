@@ -13,16 +13,22 @@ define('WRITEPATH', ROOTPATH . 'writable' . DIRECTORY_SEPARATOR);
 // Load Composer
 require ROOTPATH . 'vendor/autoload.php';
 
-// Load CodeIgniter helper functions (IMPORTANT!)
+// Load CodeIgniter helper functions
 require_once SYSTEMPATH . 'Common.php';
+
+// Load Environment BEFORE anything else
+require_once SYSTEMPATH . 'Config/DotEnv.php';
+(new CodeIgniter\Config\DotEnv(ROOTPATH))->load();
+
+// Define ENVIRONMENT constant (CRITICAL!)
+if (!defined('ENVIRONMENT')) {
+    $env = $_ENV['CI_ENVIRONMENT'] ?? $_SERVER['CI_ENVIRONMENT'] ?? getenv('CI_ENVIRONMENT') ?? 'production';
+    define('ENVIRONMENT', $env);
+}
 
 // Load Paths Config
 require APPPATH . 'Config/Paths.php';
 $paths = new Config\Paths();
-
-// Load Environment
-require_once SYSTEMPATH . 'Config/DotEnv.php';
-(new CodeIgniter\Config\DotEnv(ROOTPATH))->load();
 
 // Start CodeIgniter
 $app = Config\Services::codeigniter();
