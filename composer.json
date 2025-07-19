@@ -1,6 +1,6 @@
 {
-    "name": "codeigniter4/codeigniter4",
-    "description": "The CodeIgniter framework v4",
+    "name": "your-project/akita-app",
+    "description": "CodeIgniter 4 Application - Akita Project",
     "license": "MIT",
     "type": "project",
     "homepage": "https://codeigniter.com",
@@ -13,6 +13,9 @@
         "php": "^8.1",
         "ext-intl": "*",
         "ext-mbstring": "*",
+        "ext-mysqli": "*",
+        "ext-curl": "*",
+        "ext-fileinfo": "*",
         "laminas/laminas-escaper": "^2.17",
         "psr/log": "^3.0"
     },
@@ -57,7 +60,8 @@
     },
     "autoload": {
         "psr-4": {
-            "CodeIgniter\\": "system/"
+            "CodeIgniter\\": "system/",
+            "App\\": "app/"
         },
         "exclude-from-classmap": [
             "**/Database/Migrations/**",
@@ -77,7 +81,10 @@
         },
         "optimize-autoloader": true,
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "platform": {
+            "php": "8.1"
+        }
     },
     "extra": {
         "branch-alias": {
@@ -91,6 +98,18 @@
         "post-autoload-dump": [
             "@composer update --working-dir=utils --ignore-platform-req=php"
         ],
+ "post-install-cmd": [
+    "@railway-setup"
+],
+"railway-setup": [
+    "php spark key:generate --force",
+    "php spark cache:clear",
+    "php spark route:cache"
+],
+"railway-deploy": [
+    "composer install --no-dev --optimize-autoloader",
+    "@railway-setup"
+],
         "analyze": [
             "Composer\\Config::disableProcessTimeout",
             "@phpstan:check",
@@ -123,6 +142,8 @@
         "test": "phpunit"
     },
     "scripts-descriptions": {
+    "railway-setup": "Setup application for Railway deployment",
+    "railway-deploy": "Full Railway deployment preparation",
         "analyze": "Run static analysis",
         "cs": "Check the coding style",
         "cs-fix": "Fix the coding style",

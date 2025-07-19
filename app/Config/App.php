@@ -16,7 +16,7 @@ class App extends BaseConfig
      *
      * E.g., http://example.com/
      */
-    public string $baseURL = 'http://localhost:8080/';
+    public string $baseURL = '';
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
@@ -40,7 +40,7 @@ class App extends BaseConfig
      * something else. If you have configured your web server to remove this file
      * from your site URIs, set this variable to an empty string.
      */
-    public string $indexPage = 'index.php';
+    public string $indexPage = '';
 
     /**
      * --------------------------------------------------------------------------
@@ -133,7 +133,7 @@ class App extends BaseConfig
      * @see https://www.php.net/manual/en/timezones.php for list of timezones
      *      supported by PHP.
      */
-    public string $appTimezone = 'UTC';
+    public string $appTimezone = 'Asia/Jakarta';
 
     /**
      * --------------------------------------------------------------------------
@@ -169,18 +169,18 @@ class App extends BaseConfig
      * X-Forwarded-For or Client-IP in order to properly identify
      * the visitor's IP address.
      *
-     * You need to set a proxy IP address or IP address with subnets and
-     * the HTTP header for the client IP address.
-     *
-     * Here are some examples:
-     *     [
-     *         '10.0.1.200'     => 'X-Forwarded-For',
-     *         '192.168.5.0/24' => 'X-Real-IP',
-     *     ]
+     * Railway and Netlify proxy configurations
      *
      * @var array<string, string>
      */
-    public array $proxyIPs = [];
+    public array $proxyIPs = [
+        // Railway proxy IPs
+        '10.0.0.0/8'     => 'X-Forwarded-For',
+        '172.16.0.0/12'  => 'X-Forwarded-For',
+        '192.168.0.0/16' => 'X-Forwarded-For',
+        // Netlify proxy IPs
+        '127.0.0.1'      => 'X-Forwarded-For',
+    ];
 
     /**
      * --------------------------------------------------------------------------
@@ -199,4 +199,50 @@ class App extends BaseConfig
      * @see http://www.w3.org/TR/CSP/
      */
     public bool $CSPEnabled = false;
+
+    /**
+     * Constructor to handle environment-specific configurations
+     */
+    public function __construct()
+    {
+        parent::__construct();
+
+        // Set baseURL from environment variable or auto-detect
+        $this->baseURL = $this->getBaseURL();
+
+        // Enable HTTPS enforcement in production
+        if (ENVIRONMENT === 'production') {
+            $this->forceGlobalSecureRequests = (bool) env('app.forceGlobalSecureRequests', true);
+            $this->CSPEnabled = (bool) env('app.CSPEnabled', true);
+        }
+    }
+
+    /**
+     * Get the base URL from environment or auto-detect
+     */
+    private function getBaseURL(): string
+    {
+        // First try to get from environment variable
+        $baseURL = env('app.baseURL');
+        
+        if ($baseURL) {
+            return rtrim($baseURL, '/') . '/';
+        }
+
+        // Auto-detect for Railway
+        if (isset($_SERVER['RAILWAY_STATIC_URL'])) {
+            return 'https://' . $_SERVER['RAILWAY_STATIC_URL'] . '/';
+        }
+
+        // Auto-detect for Netlify
+        if (isset($_SERVER['URL'])) {
+            return $_SERVER['URL'] . '/';
+        }
+
+        // Auto-detect from HTTP headers
+        $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ? 'https' : 'http';
+        $host = $_SERVER['HTTP_HOST'] ?? $_SERVER['SERVER_NAME'] ?? 'localhost';
+        
+        return $protocol . '://' . $host . '/';
+    }
 }

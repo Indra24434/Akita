@@ -1,0 +1,57 @@
+#-------------------------
+# Environment Files (PENTING!)
+#-------------------------
+.env
+.env.local
+.env.production
+.env.staging
+
+#-------------------------
+# CodeIgniter 4 Writable Files
+#-------------------------
+writable/cache/*
+!writable/cache/index.html
+writable/logs/*
+!writable/logs/index.html
+writable/session/*
+!writable/session/index.html
+writable/uploads/*
+!writable/uploads/index.html
+writable/debugbar/*
+!writable/debugbar/index.html
+
+#-------------------------
+# Composer
+#-------------------------
+vendor/
+composer.lock
+
+#-------------------------
+# IDE Files
+#-------------------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+#-------------------------
+# OS Files
+#-------------------------
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+#-------------------------
+# Logs & Temporary Files
+#-------------------------
+*.log
+*.tmp
+*.bak
+php_errors.log
+
+#-------------------------
+# Database Files
+#-------------------------
+*.sql
+*.sqlite
+*.db

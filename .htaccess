@@ -1,0 +1,32 @@
+# CodeIgniter 4 Root .htaccess
+# Redirect all requests to public folder
+
+RewriteEngine On
+
+# Handle Angular and Vue.js HTML5 mode
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirect everything to public folder
+RewriteRule ^(.*)$ public/$1 [L]
+
+# Security: Block access to system folders
+RewriteRule ^(app|system|writable|tests|\.env)($|/) - [F,L]
+
+# Security: Block access to sensitive files
+<Files ~ "^(\.env|\.htaccess|composer\.(json|lock)|\.git)">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Security: Block access to PHP files in root
+<FilesMatch "\.php$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Allow access to index.php in public
+<Files "public/index.php">
+    Order allow,deny
+    Allow from all
+</Files>
