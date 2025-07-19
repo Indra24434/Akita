@@ -1,13 +1,9 @@
-# CodeIgniter 4 Root .htaccess
-# Redirect all requests to public folder
-
+# CodeIgniter 4 Root .htaccess for Railway
 RewriteEngine On
 
-# Handle Angular and Vue.js HTML5 mode
+# Handle requests to public folder
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-
-# Redirect everything to public folder
 RewriteRule ^(.*)$ public/$1 [L]
 
 # Security: Block access to system folders
@@ -19,14 +15,10 @@ RewriteRule ^(app|system|writable|tests|\.env)($|/) - [F,L]
     Deny from all
 </Files>
 
-# Security: Block access to PHP files in root
-<FilesMatch "\.php$">
-    Order allow,deny
-    Deny from all
-</FilesMatch>
-
-# Allow access to index.php in public
-<Files "public/index.php">
-    Order allow,deny
-    Allow from all
-</Files>
+# For Railway PHP built-in server compatibility
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ public/index.php/$1 [L]
+</IfModule>
