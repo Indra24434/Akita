@@ -26,6 +26,11 @@ if (!defined('ENVIRONMENT')) {
     define('ENVIRONMENT', $env);
 }
 
+// Define CodeIgniter namespaced constant
+if (!defined('CodeIgniter\ENVIRONMENT')) {
+    define('CodeIgniter\ENVIRONMENT', $env ?? 'production');
+}
+
 // Load Paths Config
 require APPPATH . 'Config/Paths.php';
 $paths = new Config\Paths();
