@@ -5,7 +5,11 @@
     "type": "project",
     "require": {
         "php": ">=8.1",
-        "codeigniter4/framework": "^4.4"
+        "codeigniter4/framework": "^4.4.0"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.21",
+        "mikey179/vfsstream": "^1.6"
     },
     "autoload": {
         "psr-4": {
@@ -16,21 +20,32 @@
             "**/Database/Migrations/**"
         ]
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Support\\": "tests/_support"
+        }
+    },
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
-        "platform": {
-            "php": "8.1"
-        }
+        "sort-packages": true,
+        "platform-check": false
     },
     "scripts": {
+        "post-update-cmd": [
+            "CodeIgniter\\ComposerScripts::postUpdate"
+        ],
         "post-autoload-dump": [
             "CodeIgniter\\ComposerScripts::postUpdate"
         ],
+        "railway-build": [
+            "composer install --no-dev --optimize-autoloader"
+        ],
         "railway-setup": [
-            "php spark key:generate --force"
+            "php spark key:generate --force",
+            "php spark cache:clear"
         ]
     },
-    "minimum-stability": "stable",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "minimum-stability": "stable"
 }
