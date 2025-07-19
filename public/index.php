@@ -13,6 +13,9 @@ define('WRITEPATH', ROOTPATH . 'writable' . DIRECTORY_SEPARATOR);
 // Load Composer
 require ROOTPATH . 'vendor/autoload.php';
 
+// Load CodeIgniter helper functions (IMPORTANT!)
+require_once SYSTEMPATH . 'Common.php';
+
 // Load Paths Config
 require APPPATH . 'Config/Paths.php';
 $paths = new Config\Paths();
