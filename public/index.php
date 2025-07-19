@@ -20,15 +20,15 @@ require_once SYSTEMPATH . 'Common.php';
 require_once SYSTEMPATH . 'Config/DotEnv.php';
 (new CodeIgniter\Config\DotEnv(ROOTPATH))->load();
 
-// Define ENVIRONMENT constant (CRITICAL!)
+// Define ENVIRONMENT constants
+$env = $_ENV['CI_ENVIRONMENT'] ?? $_SERVER['CI_ENVIRONMENT'] ?? getenv('CI_ENVIRONMENT') ?? 'production';
+
 if (!defined('ENVIRONMENT')) {
-    $env = $_ENV['CI_ENVIRONMENT'] ?? $_SERVER['CI_ENVIRONMENT'] ?? getenv('CI_ENVIRONMENT') ?? 'production';
     define('ENVIRONMENT', $env);
 }
 
-// Define CodeIgniter namespaced constant
 if (!defined('CodeIgniter\ENVIRONMENT')) {
-    define('CodeIgniter\ENVIRONMENT', $env ?? 'production');
+    define('CodeIgniter\ENVIRONMENT', $env);
 }
 
 // Load Paths Config
