@@ -12,49 +12,22 @@ define('FCPATH', __DIR__ . DIRECTORY_SEPARATOR);
 // Ensure the current directory is pointing to the front controller's directory
 chdir(FCPATH);
 
-/*
- *---------------------------------------------------------------
- * BOOTSTRAP THE APPLICATION
- *---------------------------------------------------------------
- * This process sets up the path constants, loads and registers
- * our autoloader, along with Composer's, loads our constants
- * and fires up an environment-specific bootstrapping.
- */
+// Define paths manually for Railway compatibility
+define('ROOTPATH', realpath(FCPATH . '../') . DIRECTORY_SEPARATOR);
+define('APPPATH', ROOTPATH . 'app' . DIRECTORY_SEPARATOR);
+define('SYSTEMPATH', ROOTPATH . 'vendor/codeigniter4/framework/system' . DIRECTORY_SEPARATOR);
+define('WRITEPATH', ROOTPATH . 'writable' . DIRECTORY_SEPARATOR);
+
+// Load Composer's autoloader
+require ROOTPATH . 'vendor/autoload.php';
 
 // Load our paths config file
-// This is the line that might need to be changed, depending on your folder structure.
-$pathsPath = FCPATH . '../app/Config/Paths.php';
-require realpath($pathsPath) ?: $pathsPath;
-
+require APPPATH . 'Config/Paths.php';
 $paths = new Config\Paths();
 
-// Location of the framework bootstrap file.
-$bootstrap = rtrim($paths->systemDirectory, '\\/ ') . DIRECTORY_SEPARATOR . 'bootstrap.php';
-
-if (is_file($bootstrap)) {
-    require $bootstrap;
-} else {
-    // Try the new Boot.php location
-    $bootstrap = rtrim($paths->systemDirectory, '\\/ ') . DIRECTORY_SEPARATOR . 'Boot.php';
-    if (is_file($bootstrap)) {
-        require $bootstrap;
-    } else {
-        // Fallback: define constants manually
-        define('SYSTEMPATH', rtrim($paths->systemDirectory, '\\/ ') . DIRECTORY_SEPARATOR);
-        define('ROOTPATH', rtrim($paths->rootDirectory, '\\/ ') . DIRECTORY_SEPARATOR);
-        define('APPPATH', rtrim($paths->appDirectory, '\\/ ') . DIRECTORY_SEPARATOR);
-        define('WRITEPATH', rtrim($paths->writableDirectory, '\\/ ') . DIRECTORY_SEPARATOR);
-        
-        // Load Composer's autoloader
-        require ROOTPATH . 'vendor/autoload.php';
-    }
-}
-
 // Load environment settings from .env files into $_SERVER and $_ENV
-if (class_exists('CodeIgniter\Config\DotEnv')) {
-    require_once SYSTEMPATH . 'Config/DotEnv.php';
-    (new CodeIgniter\Config\DotEnv(ROOTPATH))->load();
-}
+require_once SYSTEMPATH . 'Config/DotEnv.php';
+(new CodeIgniter\Config\DotEnv(ROOTPATH))->load();
 
 /*
  * ---------------------------------------------------------------
